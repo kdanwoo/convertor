@@ -14,7 +14,7 @@ import java.util.Map;
 
 @Slf4j
 @SpringBootApplication
-public class ConvertorApplication implements CommandLineRunner {
+public class ConvertorApplication {
 
 
     @Autowired
@@ -27,7 +27,7 @@ public class ConvertorApplication implements CommandLineRunner {
         SpringApplication.run(ConvertorApplication.class, args);
     }
 
-    @Override
+    /*@Override
     public void run(String... args) throws Exception {
 
         StopWatch stopWatch = new StopWatch();
@@ -62,5 +62,5 @@ public class ConvertorApplication implements CommandLineRunner {
         stopWatch.stop();
         log.info("수행시간 >> {}", stopWatch.getTotalTimeSeconds());  // 수행시간 >> 5.866
 
-    }
+    }*/
 }
