@@ -2,34 +2,24 @@ package com.example.convertor.service.impl;
 
 import com.example.convertor.service.PdfService;
 import com.example.convertor.utils.ImageReplaceElementFactory;
-import com.example.convertor.utils.PdfGenerator;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.BaseFont;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
-import org.thymeleaf.TemplateEngine;
-import org.thymeleaf.context.Context;
 import org.xhtmlrenderer.pdf.ITextRenderer;
 import org.xhtmlrenderer.pdf.PDFEncryption;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.Map;
 
 @Slf4j
 @Service
 public class PdfServiceImpl implements PdfService {
 
-    @Autowired
-    private TemplateEngine templateEngine;
-
-    @Autowired
-    private PdfGenerator pdfGenerator;
 
     @Value("${pdf.file-path}")
     private String filePath;
